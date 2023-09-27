@@ -111,6 +111,7 @@ env.bak/
 venv.bak/
 __init__.py
 **/__init__.py
+env.py
 
 
 # Spyder project settings

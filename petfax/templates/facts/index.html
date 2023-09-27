@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Facts Page</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>User Facts page woo</h1>
-</body>
+
+    {% if facts %}
+    <ul>
+      {% for fact in facts %}
+      <li><strong>{{ fact.submitter }}:</strong> {{ fact.fact }}</li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>No facts have been submitted yet!</p>
+    {% endif %}
+  </body>
 </html>
